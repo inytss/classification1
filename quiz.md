@@ -17,7 +17,7 @@ Turnover data consists of 10 variables and 7.142 rows. This dataset is a human r
   - `satisfaction_level`: the level of employee satisfaction working in a company
   - `last_evaluation`: employee satisfaction level at the last evaluation
   - `number_project`: the number of projects the employee has received
-  - `average_monthly_hours`: average hours worked per month
+  - `average_montly_hours`: average hours worked per month
   - `time_spend_company`: length of time in the company (years)
   - `work_accident`: presence or absence of work accident, 0 = none, 1 = there
   - `promotion_last_5years`: ever got a promotion in the last 5 years, 0 = no, 1 = yes
@@ -31,7 +31,7 @@ In this quiz, we will try to predict whether or not the employee has a resignati
 # your code here
 ```
 
-For example, as HR, we are instructed to investigate the division that has a long history of an employee resigning based on average monthly hours. Let's do some aggregation of `average_monthly_hours` for each division. Because you only focused at the employee who left, you should filter the historical data with the condition needed. You can use `filter` then `group_by()` function by `division` variable and `summarise()` the mean of `average_monthly_hours` variable and arrange it by the highest of the mean value of `average_monthly_hours` using `arrange()` function.
+For example, as HR, we are instructed to investigate the division that has a long history of an employee resigning based on average monthly hours. Let's do some aggregation of `average_montly_hours` for each division. Because you only focused at the employee who left, you should filter the historical data with the condition needed. You can use `filter` then `group_by()` function by `division` variable and `summarise()` the mean of `average_monthly_hours` variable and arrange it by the highest of the mean value of `average_montly_hours` using `arrange()` function.
 
 ```
 # your code here
@@ -92,7 +92,7 @@ Based on the `model_logictic` you have made above, take a look at the summary of
 # your code here
 ```
 ___
-3. Logistic regression is one of interpretable model. We can explain how likely each variable are predicted to the class we observed. Based on the model summary above, what can be interpreted from the `Work_accident` coeficient?
+3. Logistic regression is one of interpretable model. We can explain how likely each variable are predicted to the class we observed. Based on the model summary above, what can be interpreted from the `Work_accident1` coeficient?
   - [ ] The probability of an employee that had a work accident not resigning is 0.21.
   - [ ] Employee who had a work accident is about 0.21 more likely to resign than the employee who has not.  
   - [ ] Employee who had a work accident is about 1.57 less likely to resign than the employee who has not.  
