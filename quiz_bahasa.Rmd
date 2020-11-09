@@ -22,19 +22,19 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Kuiz Klasifikasi 1
 
-Kuis ini merupakan bagian dari proses penilaian *Algoritma Academy*. Selamat atas selesainya materi pertama dalam Klasifikasi dalam Machine Learning. Kami akan melakukan penilaian berupa kuis untuk menguji praktek teknik pembuatan model klasifikasi yang sudah Anda pelajari. Pengerjaan Kuis diharapkan dapat dilakukan di dalam kelas, silakan hubungi tim instruktur kami jika Anda melewatkan kesempatan untuk mengambilnya di kelas.
+Kuis ini merupakan bagian dari proses penilaian *Algoritma Academy*. Selamat atas selesainya materi pertama dalam Klasifikasi dalam Machine Learning. Kami akan melakukan penilaian berupa kuis untuk menguji praktek teknik pembuatan model klasifikasi yang sudah Anda pelajari. Pengerjaan kuis diharapkan dapat dilakukan di dalam kelas, silakan hubungi tim instruktur kami jika Anda melewatkan kesempatan untuk mengambilnya di kelas.
 
-Untuk menyelesaikan penilian ini, Anda diminta untuk membuat model klasifikasi yang digunakan untuk mengklasifikasikan karakteristik dari seorang karyawan yang mengundurkan diri atau tidak. Gunakan Logistic Regression dan k-Nearest Neighbor dengan mengikuti beberapa langkah berikut ini:
+Untuk menyelesaikan penilian ini, Anda diminta untuk membuat model klasifikasi yang digunakan untuk mengklasifikasikan karakteristik dari seorang karyawan yang mengundurkan diri atau tidak. Gunakan Regresi Logistik dan *k-Nearest Neighbor* dengan mengikuti beberapa langkah berikut ini:
 
 # Ekplorasi Data
 
-Pertama, kita akan mulai dari menyiapkan dan melakukan ekplorasi pada data. Pada kuis ini, Anda akan menggunakan data pergantian karyawan (`turnover`). Data ini disimpan dalam bentuk `.csv` pada *repository* ini sebagai file `turnover_balance.csv`. Bacalah data tersebut menggunakan `read.csv()` atau `read_csv()` dan simpanlah sebagai objek `turnover`. Sebelum membuat model klasifikasi, Anda perlu melakukan analisis data ekplorasi untuk memahami data tersebut. Lihatlah struktur data `turnover` kita! Anda dapat memilih menggunakan fungsi `str()` atau `glimpse()`.
+Pertama, kita akan mulai dari menyiapkan dan melakukan ekplorasi pada data. Pada kuis ini, Anda akan menggunakan data pergantian karyawan (`turnover`). Data disimpan dalam bentuk `.csv` pada *repository* ini sebagai file `turnover_balance.csv`. Bacalah data tersebut menggunakan `read.csv()` atau `read_csv()` dan simpanlah sebagai objek `turnover`. Sebelum membuat model klasifikasi, Anda perlu melakukan analisis ekplorasi data untuk memahami data tersebut. Lihatlah struktur data `turnover` kita! Anda dapat memilih menggunakan fungsi `str()` atau `glimpse()`.
 
 ```{r}
 # your code here
 ```
 
-Data *turnover* terdiri dari 10 kolom dan 7.142 baris. Data ini merupakan data *human resource* yang menunjukkan data historis mengenai karakteristik karyawan yang akan mengundurkan diri atau tidak. Dibawah ini merupaka informasi lebih lanjut tentang variabel yang terdapat pda dataset:
+Data *turnover* terdiri dari 10 kolom dan 7.142 baris. Data ini merupakan data *human resource* (HR) yang menunjukkan data historis mengenai karakteristik karyawan yang akan mengundurkan diri atau tidak. Dibawah ini merupaka informasi lebih lanjut tentang variabel yang terdapat pda dataset:
 
   - `satisfaction_level`: tingkat kepuasan karyawan bekerja di perusahaan
   - `last_evaluation`: tingkat kepuasan karyawan pada evaluasi terakhir
@@ -47,7 +47,7 @@ Data *turnover* terdiri dari 10 kolom dan 7.142 baris. Data ini merupakan data *
   - `salary`: tingkat pendapatan, dibedakan menjadi *low*, *medium*, dan *high*
   - `left`: sejarah karyawan mengundurkan diri, 0 = tidak, 1 = iya
   
-Pada kuis ini, kita akan melakukan prediksi kecenderungan seorang karyawan akan mengundurkan diri atau tidak menggunakan kolom `left` sebagai variabel target. Silahkan ubah tipe data pada kolom `Work_accident`, `left`, dan `promotion_last_5years` menjadi tipe data factor. 
+Pada kuis ini, kita akan melakukan prediksi kecenderungan seorang karyawan akan mengundurkan diri atau tidak menggunakan kolom `left` sebagai variabel target. Silahkan ubah tipe data pada kolom `Work_accident`, `left`, dan `promotion_last_5years` menjadi tipe data *factor*. 
 
 ```{r}
 # your code here
