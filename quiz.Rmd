@@ -1,3 +1,25 @@
+---
+title: "Classification in Machine Learning I Quiz"
+author: "Team Algoritma"
+date: "`r format = Sys.Date('%e, %B %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+    theme: united
+    highlight: zenburn
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      mmessage = FALSE,
+                      warning = FALSE,
+                      fig.align = 'center',
+                      comment = '#>')
+```
+
 # Classification 1 Quiz
 
 This quiz is part of Algoritma Academy assessment process. Congratulations on completing the first Classification in Machine Learning course! We will conduct an assessment quiz to test practical classification model techniques you have learned on the course. The quiz is expected to be taken in the classroom, please contact our team of instructors if you missed the chance to take it in class.
@@ -31,7 +53,7 @@ In this quiz, we will try to predict whether or not the employee has a resignati
 # your code here
 ```
 
-For example, as HR, we are instructed to investigate the division that has a long history of an employee resigning based on average monthly hours. Let's do some aggregation of `average_monthly_hours` for each division. Because you only focused at the employee who left, you should filter the historical data with the condition needed. You can use `filter` then `group_by()` function by `division` variable and `summarise()` the mean of `average_monthly_hours` variable and arrange it by the highest of the mean value of `average_monthly_hours` using `arrange()` function.
+For example, as HR, we are instructed to investigate the division that has a long history of an employee resigning based on average monthly hours. Let's do some aggregation of `average_monthly_hours` for each division. Because you only focused at the employee who left, you should filter the historical data with the condition needed. You can use `filter()` then `group_by()` function by `division` variable and `summarise()` the mean of `average_monthly_hours` variable and arrange it by the highest of the mean value of `average_monthly_hours` using `arrange()` function.
 
 ```{r}
 # your code here
@@ -92,7 +114,7 @@ Based on the `model_logictic` you have made above, take a look at the summary of
 # your code here
 ```
 ___
-3. Logistic regression is one of interpretable model. We can explain how likely each variable are predicted to the class we observed. Based on the model summary above, what can be interpreted from the `Work_accident` coeficient?
+3. Logistic regression is one of interpretable model. We can explain how likely each variable are predicted to the class we observed. Based on the model summary above, what can be interpreted from the `Work_accident1` coeficient?
   - [ ] The probability of an employee that had a work accident not resigning is 0.21.
   - [ ] Employee who had a work accident is about 0.21 more likely to resign than the employee who has not.  
   - [ ] Employee who had a work accident is about 1.57 less likely to resign than the employee who has not.  
@@ -139,27 +161,25 @@ train_x <- scale()
 test_x <- scale()
 ```
 
-After we have done performing data normalizing, we need to find the right **K** to use for our K-NN model. In practice, choosing k depends on the difficulty of the concept to be learned and the
-number of records in the training set data.
+After we have done performing data normalizing, we need to find the right **K** to use for our kNN model. In practice, choosing `k` depends on the difficulty of the concept to be learned and the number of records in the training set data.
 
 ___
-4. The method for getting K value, does not guarantee you to get the best result. But, there is one common practice for determining the number of K. What method can we use to choose the number of k?
+4. The method for getting `k` value does not guarantee you to get the best result. But, there is one common practice for determining the number of `k`. What method can we use to choose the number of `k`?
   - [ ] square root by number of row 
   - [ ] number of row
   - [ ] use k = 1
 ___
 
-After answering the questions above, please find the number of k in the following code:
+After answering the questions above, please find the number of `k` in the following code:
 
-Hint: If you have got a decimal number, do not forget to round it and make sure you end up with an odd number to prevent voting tie break.
+**Hint:** If you have got a decimal number, do not forget to round it and make sure you end up with an odd number to prevent voting tie break.
 
 ```{r}
 # your code here
 
 ```
 
-
-Using K value, we have calculated in the section before, try to predict `test_y` using `train_x` dan `train_y` dataset. To make the k-nn model, please use the `knn()` function and store the model under the `model_knn` object.
+Using `k` value we have calculated in the section before, try to predict `test_y` using `train_x` dan `train_y` dataset. To make the kNN model, please use the `knn()` function and store the model under the `model_knn` object.
 
 Next, please look up at the following code:
 
@@ -169,7 +189,7 @@ model_knn <- knn(train = ______, test = ________, cl = _______, k = _____)
 ```
 
 ___
-5. Fill the missing code here based on the picture above and choose the right code for building the knn model!
+5. Fill the missing code here based on following code above and choose the right code for building the kNN model!
   - [ ] model_knn <- knn(train = train_y, test = test_y, cl = test_y, k = 75)
   - [ ] model_knn <- knn(train = train_x, test = test_y, cl = test_x, k = 89)
   - [ ] model_knn <- knn(train = train_x, test = test_x, cl = train_y, k = 75)
@@ -190,7 +210,6 @@ Because the prediction results in the logistic model are probabilities, we have 
 pred_value <-
 ```
 
-
 Based on the prediction value above, try to answer the following question.
 
 ___
@@ -202,9 +221,9 @@ ___
 
 # Model Evaluation
 
-In the previous sections, we have performed a prediction using both Logistic Regression and K-NN algorithm. However, we need to validate whether or not our model did an excellent job of predicting unseen data. In this step, try to make the confusion matrix of model performance in the logistic regression model based on `test` data and `pred_value` and use the positive class is "1".
+In the previous sections, we have performed a prediction using both Logistic Regression and kNN algorithm. However, we need to validate whether or not our model did an excellent job of predicting unseen data. In this step, try to make the confusion matrix of model performance in the logistic regression model based on `test` data and `pred_value` and use the positive class is "1".
 
-**Note:** do not forget to do the explicit coercion `as.factor()`.
+**Note:** Do not forget to do the explicit coercion `as.factor()`.
 
 ```{r}
 # your code here
@@ -233,8 +252,8 @@ ___
 
 ___
 9.  Now, recall what we have learned the advantage of each model. Which one is more suitable to use if we aimed for model interpretability?
-  - [ ] K-NN, because it tends to have a higher performance than logistic regression
-  - [ ] Logistic regression, because it has a lower performance than K-nn
+  - [ ] kNN, because it tends to have a higher performance than logistic regression
+  - [ ] Logistic regression, because it has a lower performance than kNN
   - [ ] Logistic regression, because each coefficient can be transformed into an odds ratio
-  - [ ] K-NN, because it results in a better precision score for the positive class
+  - [ ] kNN, because it results in a better precision score for the positive class
 ___
