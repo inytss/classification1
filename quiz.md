@@ -25,7 +25,7 @@ Turnover data consists of 10 variables and 7.142 rows. This dataset is a human r
   - `salary`: income level, divided into low, medium and high
   - `left`: employee history data resigned, 0 = no, 1 = yes
   
-In this quiz, we will try to predict whether or not the employee has a resignation tendency using the `left` column as our target variable. Please change the class of `Work_accident`, `left`, and `promotion_last_5years` column to be in factor class as it should be.
+In this quiz, we will try to predict whether or not the employee has a resignation tendency using the `left` column as our target variable. Please change the class of `Work_accident`, `left`,  `salary` and `promotion_last_5years` column to be in factor class as it should be.
 
 ```
 # your code here
