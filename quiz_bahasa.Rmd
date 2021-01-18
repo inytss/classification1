@@ -47,7 +47,7 @@ Data *turnover* terdiri dari 10 kolom dan 7.142 baris. Data ini merupakan data *
   - `salary`: tingkat pendapatan, dibedakan menjadi *low*, *medium*, dan *high*
   - `left`: sejarah karyawan mengundurkan diri, 0 = tidak, 1 = iya
   
-Pada kuis ini, kita akan melakukan prediksi kecenderungan seorang karyawan akan mengundurkan diri atau tidak menggunakan kolom `left` sebagai variabel target. Silahkan ubah tipe data pada kolom `Work_accident`, `left`, `salary`dan `promotion_last_5years` menjadi tipe data *factor*. 
+Pada kuis ini, kita akan melakukan prediksi kecenderungan seorang karyawan akan mengundurkan diri atau tidak menggunakan kolom `left` sebagai variabel target. Silahkan ubah tipe data pada kolom `Work_accident`, `left`, `salary` dan `promotion_last_5years` menjadi tipe data *factor*. 
 
 ```{r}
 # your code here
@@ -144,7 +144,8 @@ Untuk melakukan normalisasi fitur pada `train_x`, silahkan gunakan fungsi `scale
 
 Silahkan lihat pada *code* dibawah ini sebagai contoh untuk melakukan normalisasi pada data `test_x`:
 
-```{r}
+```{r eval=FALSE}
+# JANGAN DI RUN CODE BERIKUT
 scale(data_test, center = attr(data_train, "scaled:center"),
 scale = attr(data_train, "scaled: scale"))
 ```
@@ -183,7 +184,7 @@ Menggunakan nilai `k` yang telah kita hitung pada tahap sebelumnya, cobalah untu
 
 Selanjutnya, lihatlah pada panduan *code* berikut:
 
-```{r}
+```{r eval=FALSE}
 library(class)
 model_knn <- knn(train = ______, test = ________, cl = _______, k = _____)
 ```
