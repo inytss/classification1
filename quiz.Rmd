@@ -144,7 +144,8 @@ To normalize the features in `train_x`, please using `scale()` function. Meanwhi
 
 Please look up to the following code as an example to normalize `test_x` data:
 
-```{r}
+```{r eval=FALSE}
+# DON'T RUN THIS CODE
 scale(data_test, center = attr(data_train, "scaled:center"),
 scale = attr(data_train, "scaled: scale"))
 ```
@@ -183,7 +184,7 @@ Using `k` value we have calculated in the section before, try to predict `test_y
 
 Next, please look up at the following code:
 
-```{r}
+```{r eval=FALSE}
 library(class)
 model_knn <- knn(train = ______, test = ________, cl = _______, k = _____)
 ```
