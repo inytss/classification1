@@ -254,7 +254,7 @@ ___
 ___
 9. Sekarang, ingatlah apa yang sudah kita pelajari mengenai kelebihan dari masing-masing mdoel. Manakah model yang lebih tepat digunakan apabila tujuan kita adalah mendapatkan model yang dapat diinterpretasikan?
   - [ ] *kNN*, karena  cenderung memiliki performa yang lebih tinggi dibandingkan regresi logistik
-  - [ ] Regresi logistik, karena model tersebut memiliki performa yang lebih rendah dibandingkan *kNN* because it has a lower performance than K-nn
+  - [ ] Regresi logistik, karena model tersebut memiliki performa yang lebih rendah dibandingkan *kNN*
   - [ ] Regresi logistik, karena setiap koefisien dapat diubah menjadi *odds ratio*
   - [ ] *kNN*, karena hasilnya memiliki *precision* yang lebih baik untuk kelas positif
 ___
