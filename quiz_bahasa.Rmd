@@ -130,7 +130,7 @@ ___
   - [ ] Karyawan yang memiliki kecelakaan kerja 1.57 kali lebih tidak mungkin untuk mengundurkan diri dibandingkan dengan karyawan yang tidak memiliki kecelakaan kerja.
 
 *Referensi Opsi Bahasa Inggris:*
-- [ ] The probability of an employee that had a work accident to not resign is 0.21.
+  - [ ] The probability of an employee that had a work accident to not resign is 0.21.
   - [ ] Employee who had a work accident is about 0.21 more likely to resign than the employee who had not experienced work accidents.  
   - [ ] Employee who had a work accident is about 1.57 less likely to resign than the employee who had not experienced work accidents.
 
