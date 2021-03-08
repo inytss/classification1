@@ -281,6 +281,7 @@ ___
   - [ ] K-Nearest Neighbor  
   - [ ] Both have more or less similar performance    
 ___
+<<<<<<< HEAD
 9. Sekarang, ingatlah apa yang sudah kita pelajari mengenai kelebihan masing-masing model. Manakah model yang lebih tepat digunakan bila kita bertujuan untuk mendapatkan model yang dapat diinterpretasikan?
   - [ ] *kNN*, karena cenderung memiliki performa yang lebih tinggi dibandingkan model regresi logistik
   - [ ] Regresi logistik, karena model tersebut memiliki performa yang lebih rendah dibandingkan *kNN* 
@@ -292,4 +293,11 @@ ___
   - [ ] Logistic regression, because it has a lower performance than kNN
   - [ ] Logistic regression, because each coefficient can be transformed into an odds ratio
   - [ ] kNN, because it results in a better precision score for the positive class
+=======
+9. Sekarang, ingatlah apa yang sudah kita pelajari mengenai kelebihan dari masing-masing mdoel. Manakah model yang lebih tepat digunakan apabila tujuan kita adalah mendapatkan model yang dapat diinterpretasikan?
+  - [ ] *kNN*, karena  cenderung memiliki performa yang lebih tinggi dibandingkan regresi logistik
+  - [ ] Regresi logistik, karena model tersebut memiliki performa yang lebih rendah dibandingkan *kNN*
+  - [ ] Regresi logistik, karena setiap koefisien dapat diubah menjadi *odds ratio*
+  - [ ] *kNN*, karena hasilnya memiliki *precision* yang lebih baik untuk kelas positif
+>>>>>>> ed87e7bc05d5d464454153fef60a5096e87f243f
 ___
