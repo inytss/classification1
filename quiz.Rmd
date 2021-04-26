@@ -53,7 +53,12 @@ In this quiz, we will try to predict whether or not the employee has a resignati
 # your code here
 ```
 
-For example, as HR, we are instructed to investigate the division that has a long history of an employee resigning based on average monthly hours. Let's do some aggregation of `average_monthly_hours` for each division. Because you only focused at the employee who left, you should filter the historical data with the condition needed. You can use `filter()` then `group_by()` function by `division` variable and `summarise()` the mean of `average_monthly_hours` variable and arrange it by the highest of the mean value of `average_monthly_hours` using `arrange()` function.
+For example, as an HR staff, we are instructed to investigate divisions that has a long history of an employee resigning and analyze their average monthly hours. Let's do some aggregation of `average_monthly_hours` for each division. Because you only focused on the employee who left, you should filter the historical data with the condition needed. 
+
+Using **dplyr** functions, you can use `filter()`, then `group_by()` function by `division` and `summarise()` the mean of `average_montly_hours`, then arrange it based on `average_montly_hours` from high to low using `arrange()` function.
+
+As an alternative, if you are more familiar using **base R** code style, you can filter the data using conditional sub setting `data["condition needed",]`, than assign it into `df_left` object. After that, you can aggregate `df_left` based on `division` and `average_montly_hours` column using `aggregate()` function. Don't forget to use `mean` in `FUN` parameter and assign it into `df_agg`. In order to get the ordered mean value from high to low of the `average_montly_hours`, you can use `order()` function in conditional sub setting `data[order(column_name, decreasing = T), ]`.
+
 
 ```{r}
 # your code here
