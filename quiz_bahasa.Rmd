@@ -54,12 +54,17 @@ Pada kuis ini, kita akan memprediksi kecenderungan karyawan untuk mengundurkan d
 # your code here
 ```
 
-Sebagai seorang HR, kita diminta untuk menginvestigasi divisi yang memiliki rekam jejak pengundurkan diri karyawan kemudian menganalisis rata-rata jam kerja per bulan dari karyawan yang resign dari tiap divisi tersebut. Silahkan lakukan agregasi data untuk mendapatkan `average_montly_hours` dari tiap divisi. 
 
-Karena Anda hanya fokus pada karyawan yang resign, Anda harus menyeleksi data historis sesuai dengan kriteria tersebut. Anda dapat menggunakan fungsi `filter()` lalu menggunakan fungsi `group_by()` untuk mengelompokkan data berdasarkan variabel `division`, kemudian menggunakan fungsi `summarise()` untuk menghitung rata-rata variabel `average_montly_hours` untuk tiap divisi. Selanjutnya Anda dapat mengurutkan divisi berdasarkan nilai `average_monthly_hours` yang tertinggi ke yang terendah dengan menggunakan fungsi `arrange()`.  
+Misal, sebagai seorang staff HR, kita diminta untuk menginvestigasi divisi yang memiliki rekam jejak karyawan yang mengundurkan diri berdasarkan rata-rata jam kerja per bulan. Silahkan lakukan agregasi data berdasarkan `average_monthly_hours` untuk masing-masing divisi. Dikarenakan Anda hanya difokuskan pada karyawan yang mengundurkan diri, Anda harus menyeleksi data historis berdasarkan kondisi yang dibutuhkan. 
+
+Menggunakan fungsi **dplyr**, Anda dapat menggunakan fungsi `filter()` lalu menggunakan fungsi `group_by()` berdasarkan variabel `division`, dan menggunakan fungsi `summarise()` untuk mendapatkan rata-rata dari variabel `average_monthly_hours` serta urutkanlah berdasarkan nilai rata-rata tertinggi pada `average_monthly_hours` dengan menggunakan fungsi `arrange()`.  
+
+Sebagai alternatif, apabila Anda lebih familiar menggunakan gaya coding **base R**, Anda dapat melakukan filter data menggunakan fungsi *conditional sub setting* `data["condition needed",]`, lalu simpanlah ke dalam objek `df_left`. Selanjutnya, Anda dapat melakukan agregasi `df_left` berdasarkan kolom `division` dan `average_montly_hours` menggunakan fungsi `aggregate()`. Jangan lupa untuk menggunakan argumen `mean` dalam parameter `FUN` yang terdapat pada fungsi `aggregate()` dan simpankah kedalam objek `df_agg`. Untuk mengurutkan nilai rata-rata `average_montly_hours` dari yang tertinggi ke terendah, Anda dapat menggunakan fungsi `order` didalam *conditional sub setting* `data[order(nama_kolom, decreasing = T), ]`
+
 
 ```{r}
 # your code here
+
 ```
 ___
 1. Berdasarkan agregasi data yang telah Anda buat, divisi mana yang memiliki rata-rata jam kerja per bulan yang tertinggi?
